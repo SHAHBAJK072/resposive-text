@@ -1,0 +1,297 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Text Resizing</title>
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: flex-end; /* Align text at the bottom */
+            background-color: #f0f0f0; /* Light background */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Text Styles */
+        h1 {
+            margin: 0;
+            color: red;
+            text-align: center;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="dynamic-text">SHAHBAJ</h1>
+
+    <script>
+        // Function to dynamically calculate font size
+        function adjustFontSize() {
+            const textElement = document.getElementById("dynamic-text");
+            
+            // Get viewport width and height
+            const vw = window.innerWidth;  // Viewport width
+            const vh = window.innerHeight; // Viewport height
+
+            // Conditional font size calculation
+            let fontSize;
+            if (vh >= vw * 0.5) {
+                // Use `vw` calculation when height is >= 50% of width
+                fontSize = vw * 0.1; // Adjust this factor for your needs
+            } else {
+                // Use `vh` calculation when height is < 50% of width
+                fontSize = vh * 0.1; // Adjust this factor for your needs
+            }
+
+            // Apply font size to the text element
+            textElement.style.fontSize = fontSize + "px";
+        }
+
+        // Adjust font size on load and resize
+        window.addEventListener("load", adjustFontSize);
+        window.addEventListener("resize", adjustFontSize);
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text with JavaScript</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .hero-name {
+            font-family: Arial, sans-serif;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="hero-name" id="responsive-text">Responsive Text</h1>
+
+    <script>
+        function adjustFontSize() {
+            const textElement = document.getElementById("responsive-text");
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            // Logic to calculate font size
+            let fontSize;
+
+            if (viewportWidth >= 1400) {
+                fontSize = viewportWidth * 0.05; // Use `vw` for larger screens
+            } else {
+                fontSize = Math.min(viewportWidth * 0.08, viewportHeight * 0.1); // Switch to `vh` for smaller screens
+            }
+
+            // Apply calculated font size
+            textElement.style.fontSize = fontSize + "px";
+        }
+
+        // Adjust font size on load and resize
+        window.addEventListener("load", adjustFontSize);
+        window.addEventListener("resize", adjustFontSize);
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text with Clamp</title>
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .my {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        /* Responsive Text */
+        .hero-name {
+            font-family: Arial, sans-serif;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+
+            /* Use clamp to adjust font size */
+            font-size: clamp(1rem, 8vw, 10vh);
+            /* 1rem = Minimum font size */
+            /* 8vw = Ideal font size based on viewport width */
+            /* 10vh = Maximum font size based on viewport height */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="my">
+        <h1 class="hero-name">Responsive Text</h1>
+    </div>
+</body>
+
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text with Clamp</title>
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .my {
+            display: flex;
+            justify-content: center; /* Horizontal center */
+            align-items: flex-end; /* Vertical bottom alignment */
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        /* Responsive Text */
+        .hero-name {
+            font-family: Arial, sans-serif;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+
+            /* Use clamp to adjust font size */
+            font-size: clamp(1rem, 8vw, 15vh);
+            /* 1rem = Minimum font size */
+            /* 8vw = Ideal font size based on viewport width */
+            /* 10vh = Maximum font size based on viewport height */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="my">
+        <h1 class="hero-name">Responsive Text</h1>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Aligned Overlap</title>
+    <style>
+        /* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .container {
+            /* position: relative; */
+            text-align: center; /* Center text horizontally */
+            width: 100%;
+        }
+
+        /* Image Styling */
+        .hero-image {
+            position: absolute; /* Absolute positioning for overlap */
+            bottom: 0; /* Align at bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Offset to true center */
+            height: clamp(15vh, 80vh, 80vw); /* Responsive height */
+            z-index: 2; /* Image above the text */
+        }
+
+        /* Text Styling */
+        .hero-name {
+            font-family: Arial, sans-serif;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: clamp(2rem, 5vw, 6vh); /* Responsive font size */
+            position: relative;
+            z-index: 1; /* Text behind image */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Image -->
+        <img class="hero-image" src="./img/my-img.png" alt="Hero Image">
+        <!-- Text -->
+        <h1 class="hero-name">Your Text Here</h1>
+    </div>
+</body>
+
+</html>
+
+
